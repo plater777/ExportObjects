@@ -9,6 +9,11 @@ import re
 import subprocess
 import sys
 
+### Added to ensure non-unicode characters compatibility, not perfect but it worked (:
+reload(sys)
+sys.setdefaultencoding('utf-8')
+###
+
 from cp_mgmt_api_python_sdk.lib import APIClient, APIClientArgs, APIClientException, APIException
 
 
